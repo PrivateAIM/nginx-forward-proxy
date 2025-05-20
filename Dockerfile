@@ -6,7 +6,7 @@ ARG nginx_version=1.27.1
 ARG nginx_proxy_version=0.0.7
 ARG nginx_proxy_connect_patch_file=proxy_connect_rewrite_102101.patch
 
-RUN apk add alpine-sdk git wget pcre-dev apache2-utils
+RUN apk add alpine-sdk git wget pcre-dev
 
 RUN git clone https://github.com/chobits/ngx_http_proxy_connect_module.git --branch v${nginx_proxy_version} --single-branch ngx_http_proxy_connect_module
 RUN git clone https://github.com/madler/zlib.git --branch v${zlib_version} --single-branch zlib
